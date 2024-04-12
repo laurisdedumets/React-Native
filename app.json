@@ -1,4 +1,13 @@
 {
-  "name": "ReactNative",
-  "displayName": "React Native"
+  "expo": {
+    "name": "React Native",
+    "slug": "react-native",
+    "runtimeVersion": "1.0.0",
+    "updates": {
+      "url": "http://localhost:3000/api/manifest?project=react-native&channel=main",
+      "enabled": true,
+      "checkAutomatically": "ON_ERROR_RECOVERY",
+      "fallbackToCacheTimeout": 0
+    }
+  }
 }
