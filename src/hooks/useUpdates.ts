@@ -3,7 +3,8 @@ import {useEffect} from 'react';
 import {Alert} from 'react-native';
 
 export const useUpdates = () => {
-  const {isUpdateAvailable, isUpdatePending} = Updates.useUpdates();
+  const {isUpdateAvailable, isUpdatePending, downloadError} =
+    Updates.useUpdates();
 
   // Handle checking for updates on app start.
   // This is done manually as the automatic check also downloads the update,
@@ -59,4 +60,11 @@ export const useUpdates = () => {
       );
     }
   }, [isUpdatePending]);
+
+  // Show a message if the update fails to download.
+  useEffect(() => {
+    if (downloadError) {
+      Alert.alert('Update Error', downloadError.message);
+    }
+  }, [downloadError]);
 };
