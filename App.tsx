@@ -25,6 +25,8 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import {useUpdates} from './src/hooks/useUpdates';
+
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
@@ -56,6 +58,8 @@ function Section({children, title}: SectionProps): React.JSX.Element {
 }
 
 function App(): React.JSX.Element {
+  useUpdates();
+
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
