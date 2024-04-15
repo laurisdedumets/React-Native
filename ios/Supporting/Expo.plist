@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-  <dict>
-    <key>EXUpdatesEnabled</key>
-    <true/>
-    <key>EXUpdatesCheckOnLaunch</key>
-    <string>NEVER</string>
-    <key>EXUpdatesLaunchWaitMs</key>
-    <integer>0</integer>
-    <key>EXUpdatesRuntimeVersion</key>
-    <string>1.0.0</string>
-    <key>EXUpdatesURL</key>
-    <string>http://localhost:3000/api/manifest?project=react-native&amp;channel=main</string>
-  </dict>
+<dict>
+	<key>EXUpdatesEnabled</key>
+	<true/>
+	<key>EXUpdatesCheckOnLaunch</key>
+	<string>NEVER</string>
+	<key>EXUpdatesLaunchWaitMs</key>
+	<integer>0</integer>
+	<key>EXUpdatesURL</key>
+	<string>http://localhost:3000/api/manifest</string>
+	<key>EXUpdatesReleaseChannel</key>
+	<string>main</string>
+	<key>EXUpdatesRuntimeVersion</key>
+	<string>1.0.0</string>
+	<key>EXUpdatesRequestHeaders</key>
+	<dict>
+		<key>expo-app-name</key>
+		<string>react-native</string>
+	</dict>
+</dict>
 </plist>
