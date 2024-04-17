@@ -20,4 +20,4 @@ base64 -i update.zip | curl --location 'http://localhost:3000/upload' \
 --data @-
 
 # Clean up.
-rm -rf update.zip $UPDATE_KEY
+rm -rf update.zip ./$UPDATE_KEY
