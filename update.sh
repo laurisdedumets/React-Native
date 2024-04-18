@@ -13,7 +13,7 @@ cd dist
 zip update.zip -r ./$UPDATE_KEY
 
 # Upload the bundle as a Base64 encoded string of the ZIP file.
-base64 -i update.zip | curl --location "http://localhost:3000/upload" \
+base64 -i update.zip | curl --location "http://localhost:3000/update" \
 --header "expo-app-name: react-native" \
 --header "expo-release-channel: main" \
 --header "expo-runtime-version: 1.0.0" \
